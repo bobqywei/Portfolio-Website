@@ -22,16 +22,17 @@
 
         </script>
         
-        <div id="MainPage">
+        <div id="Main-page">
+        <div id="Main-content">
             <div id="Name">
                 <img src="Name.png" style="display: block; width: 80%; height: auto; margin: auto auto;">
             </div>
 
             <div id="Photo">
-                <img src="Photo.jpg" style="display: block; position: absolute; width: 95%; height: auto; z-index: 2; opacity: 0.9;">            
+                <img src="Photo.jpg" id="Photo-img" style="display: block; position: absolute; width: 95%; height: auto; z-index: 2; opacity: 0.9;">            
                     
                 <div class="box" style="margin-top: -2.5%; margin-left: -2.5%">
-                    <div class="medium-shadow"></div>
+                    <div id="Photo-shadow" class="medium-shadow"></div>
                 </div>
             </div>
 
@@ -41,34 +42,85 @@
             
             <div id="LinkedIn">
                 <a href="https://www.linkedin.com/in/bob-w-433b39116/" target="_blank">
-                    <img src="Linkedin.png" style="display: block; position: absolute; width: 70%; height: auto; z-index: 2;">
+                    <img id="LinkedIn-img" src="Linkedin.png" style="display: block; position: absolute; width: 70%; height: auto; z-index: 2;">
                 </a>
 
                 <div class="box" style="margin-top: -15%; margin-left: -15%;">
-                    <div class="small-shadow"></div>
+                    <div class="small-shadow" id="LinkedIn-shadow"></div>
                 </div>
             </div>
 
             <div id="Resume">
                 <a href="https://bobqywei.github.io/Resume/" target="_blank">
-                    <img src="Resume.png" style="display: block; position: absolute; width: 80%; height: auto; z-index: 2;">
+                    <img id="Resume-img" src="Resume.png" style="display: block; position: absolute; width: 80%; height: auto; z-index: 2;">
                 </a>
 
                 <div class="box" style="margin-top: -7%; margin-left: -7%;">
-                    <div class="xsmall-shadow"></div>
+                    <div class="xsmall-shadow" id="Resume-shadow"></div>
                 </div>
             </div>
 
             <div id="GitHub">
                 <a href="https://github.com/bobqywei" target="_blank">
-                    <img src="GitHub.png" style="display: block; position: absolute; width: 70%; height: auto; z-index: 2;">
+                    <img id="GitHub-img" src="GitHub.png" style="display: block; position: absolute; width: 70%; height: auto; z-index: 2;">
                 </a>
 
                 <div class="box" style="margin-top: -16%; margin-left: -15%;">
-                    <div class="small-shadow"></div>
+                    <div class="small-shadow" id="GitHub-shadow"></div>
                 </div>
             </div>
+
+            <script>
+
+                $('#LinkedIn').hover(function(){
+                    $('#LinkedIn-shadow').animate({left: '0%', top: '0%'}, 500);
+                    $('#LinkedIn-img').animate({opacity: '0.6'}, 200);
+                }, function(){
+                    $('#LinkedIn-shadow').animate({left: '16%', top: '16%'}, 200);
+                    $('#LinkedIn-img').animate({opacity: '1.0'}, 200);
+                });
+
+                $('#GitHub').hover(function(){
+                    $('#GitHub-shadow').animate({left: '0%', top: '0%'}, 500);
+                    $('#GitHub-img').animate({opacity: '0.6'}, 200);
+                }, function(){
+                    $('#GitHub-shadow').animate({left: '16%', top: '16%'}, 500);
+                    $('#GitHub-img').animate({opacity: '1.0'}, 200);
+                });
+
+                $('#Resume').hover(function(){
+                    $('#Resume-shadow').animate({left: '0%', top: '0%'}, 500);
+                    $('#Resume-img').animate({opacity: '0.6'}, 200);
+                }, function(){
+                    $('#Resume-shadow').animate({left: '20%', top: '20%'}, 200);
+                    $('#Resume-img').animate({opacity: '1.0'}, 200);
+                });
+
+                $('#Photo').hover(function(){
+                    $('#Photo-shadow').animate({left: '0%', top: '0%'}, 500);
+                    $('#Photo-img').animate({opacity: '0.6'}, 200);
+                }, function(){
+                    $('#Photo-shadow').animate({left: '10%', top: '10%'}, 200);
+                    $('#Photo-img').animate({opacity: '1.0'}, 200);
+                });
+
+                $('#Description').hover(function(){
+                    $('#Description').animate({opacity: '0.7'}, 200);
+                }, function(){
+                    $('#Description').animate({opacity: '1.0'}, 200);
+                });
+
+            </script>
+        </div>
+        </div>
+
+        <div id="Project-page">
+            Hello World
         </div>
 
     </body>
+
+    <footer>
+        <script src="main.js"></script>
+    </footer>
 </html>

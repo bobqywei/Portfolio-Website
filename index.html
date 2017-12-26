@@ -21,6 +21,7 @@
                 $('#Name').hide().fadeIn(1000);
                 $('#Description').hide().delay(2000).fadeIn(1000);
                 $('#Photo').hide().delay(2000).fadeIn(1000);
+                $('#Arrow-img').hide().delay(2000).fadeIn(1000);
                 $('#LinkedIn').hide().delay(1000).fadeIn(1000);
                 $('#GitHub').hide().delay(1000).fadeIn(1000);
                 $('#Resume').hide().delay(1000).fadeIn(1000);
@@ -106,7 +107,7 @@
                         $('#Photo-img').animate({opacity: '0.6'}, 200);
                     }, function(){
                         $('#Photo-shadow').animate({left: '10%', top: '10%'}, 100);
-                        $('#Photo-img').animate({opacity: '1.0'}, 100);
+                        $('#Photo-img').animate({opacity: '0.9'}, 100);
                     });
 
                     $('#Description').hover(function(){
@@ -119,7 +120,35 @@
         </div>
 
         <div id="Project-page">
+
+            <div id="Arrow-div" style="position: absolute; top: -18vh; width: 100%;">
+                <img src="Arrow.png" id="Arrow-img" style="display: block; margin: auto auto; width: 12vh; opacity: 0.8;">
+            </div>
+            
             <h1 style="padding-top: 20px;">PROJECTS</h1>
+
+            <script>
+                $('#Arrow-img').hover(function() {
+                    $('#Arrow-img').animate({opacity: '1.0'});
+                    $('#Arrow-div').animate({top: '-20vh'});
+                }, function() {
+                    $('#Arrow-img').animate({opacity: '0.8'});
+                    $('#Arrow-div').animate({top: '-18vh'});
+                });
+
+                $('#Arrow-img').click(function() {
+                    var iters = 15;
+                    var step = window.innerHeight/iters;
+                    var pos = window.scrollY + step;
+
+                    var int = setInterval(function() {
+                        window.scrollTo(0, pos);
+                        pos += step;
+                        if (pos >= window.innerHeight) clearInterval(int);
+                    }, iters);
+                });
+            </script>
+
         </div>
 
     </body>

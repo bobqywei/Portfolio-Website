@@ -21,9 +21,10 @@
 
 body{
     background: #070B1E url("background.png") repeat 0 0;
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
     
     -webkit-animation: slide 20s linear infinite;
     -moz-animation: slide 20s linear infinite;
@@ -32,25 +33,33 @@ body{
 }
 
 #Main-page{
+    position: relative;
     width: 100%;
-    height: 100vh;
-    position: absolute;
+    height: 98vh;
 }
 
-#Main-content{
-    position: absolute;
+#Project-page{
+    position: relative;
     width: 100%;
-    padding-bottom: 48%;
+    height: 98vh;
+    background: #fff;
+    opacity: 0.5;
+    z-index: 3;
+}
 
-    top: 50%;  /* position the top  edge of the element at the middle of the parent */
-    left: 50%; /* position the left edge of the element at the middle of the parent */
-    transform: translate(-50%, -50%); /* Moves 50% of element itself */
+#Content{
+    position: relative;
+    width: 100vw;
+    padding-bottom: 48vw;
+
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 #Name{
     position: absolute;
     width: 40%;
-    height: 40%;
+    height: 60%;
     left: 33%;
     top: 25%;
 }
@@ -89,12 +98,6 @@ body{
     width: 10%;
     left: 75%;
     top: 64%;
-}
-
-#Project-page{
-    position: absolute;
-    width: 100%;
-    top: 100%;
 }
 
 .box{

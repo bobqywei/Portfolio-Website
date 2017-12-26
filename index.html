@@ -11,12 +11,11 @@
 
         <script>
             $(window).on('scroll', function() {
-                var top = $(window).scrollTop(), vh = $("#Main-page").height();
-                $('#Content').css('top', top * 0.5 + vh * 0.5, 'px');
+                var top = $(window).scrollTop();
+                $('#Main-page').css('top', top * 0.15, 'px');
             });
 
             jQuery('body').css('display', 'none');
-
             jQuery(document).ready(function() {
                 $('body').show();
                 $('#Name').hide().fadeIn(1000);
@@ -120,7 +119,7 @@
         </div>
 
         <div id="Project-page">
-            Hello World
+            <h1 style="padding-top: 20px;">PROJECTS</h1>
         </div>
 
     </body>

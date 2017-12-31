@@ -218,23 +218,35 @@ section{
     width: 90%;
     max-width: 500px;
     padding: 15px;
+    height: 500px;
+    overflow: auto;
 }
 
 .modal-textbox{
     width: 100%;
     text-align: justify;
-    color: #aaaaaa;
+    color: rgb(7, 11, 30);
     margin-left: -16px;
     text-shadow: none;
 }
 
 .close {
     color: #aaaaaa;
-    float: right;
+    float: left;
     font-size: 30px;
 }
 
 .close:hover{
     color: #000;
     cursor: pointer;
+}
+
+.link{
+    width: 40px;
+    height: 40px;
+    margin: auto auto;
+}
+
+.link:hover{
+    opacity: 0.5;
 }

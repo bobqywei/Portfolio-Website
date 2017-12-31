@@ -17,10 +17,12 @@
             });
 
             $(window).on("load", function() {
-                $('#Name').fadeIn(1000);
-                $('#Content1').delay(2000).fadeIn(1000);
-                $('#Arrow-div').delay(2000).fadeIn(1000);
-                $('#Content2').delay(1000).fadeIn(1000);
+                $('#Name').fadeIn(1000, function() {
+                    $('#Content2').fadeIn(1000, function() {
+                        $('#Arrow-div').fadeIn(1000);
+                        $('#Content1').fadeIn(1000);
+                    });
+                });
             });
         </script>
         
@@ -47,7 +49,7 @@
                 
                 <div id="Content2" style="display:none;">
                     <div id="LinkedIn">
-                        <a href="https://www.linkedin.com/in/bob-w-433b39116/" target="_blank">
+                        <a href="https://linkedin.com/in/bobqywei" target="_blank">
                             <img id="LinkedIn-img" src="Images/Linkedin.png" style="display: block; position: absolute; width: 70%; height: auto; z-index: 2;">
                         </a>
 
@@ -57,7 +59,7 @@
                     </div>
 
                     <div id="Resume">
-                        <a href="https://bobqywei.github.io/Resume/" target="_blank">
+                        <a href="https://docs.google.com/viewerng/viewer?url=https://github.com/bobqywei/Resume/raw/master/Resume+Programming.pdf" target="_blank">
                             <img id="Resume-img" src="Images/Resume.png" style="display: block; position: absolute; width: 80%; height: auto; z-index: 2;">
                         </a>
 
@@ -79,31 +81,31 @@
 
                 <script>
                     $('#LinkedIn').hover(function(){
-                        $('#LinkedIn-shadow').animate({left: '0%', top: '0%'}, 500);
+                        $('#LinkedIn-shadow').animate({opacity: '0.0'}, 500);
                         $('#LinkedIn-img').animate({opacity: '0.6'}, 200);
                     }, function(){
-                        $('#LinkedIn-shadow').animate({left: '16%', top: '16%'}, 100);
+                        $('#LinkedIn-shadow').animate({opacity: '1.0'}, 300);
                         $('#LinkedIn-img').animate({opacity: '1.0'}, 100);
                     });
                     $('#GitHub').hover(function(){
-                        $('#GitHub-shadow').animate({left: '0%', top: '0%'}, 500);
+                        $('#GitHub-shadow').animate({opacity: '0.0'}, 500);
                         $('#GitHub-img').animate({opacity: '0.6'}, 200);
                     }, function(){
-                        $('#GitHub-shadow').animate({left: '16%', top: '16%'}, 100);
+                        $('#GitHub-shadow').animate({opacity: '1.0'}, 300);
                         $('#GitHub-img').animate({opacity: '1.0'}, 100);
                     });
                     $('#Resume').hover(function(){
-                        $('#Resume-shadow').animate({left: '0%', top: '0%'}, 500);
+                        $('#Resume-shadow').animate({opacity: '0.0'}, 500);
                         $('#Resume-img').animate({opacity: '0.6'}, 200);
                     }, function(){
-                        $('#Resume-shadow').animate({left: '20%', top: '20%'}, 100);
+                        $('#Resume-shadow').animate({opacity: '1.0'}, 300);
                         $('#Resume-img').animate({opacity: '1.0'}, 100);
                     });
                     $('#Photo').hover(function(){
-                        $('#Photo-shadow').animate({left: '0%', top: '0%'}, 500);
+                        $('#Photo-shadow').animate({opacity: '0.0'}, 500);
                         $('#Photo-img').animate({opacity: '0.6'}, 200);
                     }, function(){
-                        $('#Photo-shadow').animate({left: '10%', top: '10%'}, 100);
+                        $('#Photo-shadow').animate({opacity: '1.0'}, 300);
                         $('#Photo-img').animate({opacity: '0.9'}, 100);
                     });
                     $('#Description').hover(function(){
@@ -146,23 +148,24 @@
             <section>
                 <div class="container-fluid">
                     <div class="container">
+
                         <div class="row">
                             <div class="col-md-4">
-                                <div class="projectBox">
+                                <div id="Box1" class="projectBox">
                                     <img src="Images/Image1.jpg" class="img-responsive" style="width: 100%; border-radius: 30%;">
                                     <h2>Embedded and Data Analysis Algorithms</h2>
                                 </div>
                             </div>
 
                             <div class="col-md-4">
-                                <div class="projectBox">
+                                <div id="Box2" class="projectBox">
                                     <img src="Images/Image2.png" class="img-responsive" style="width: 100%; border-radius: 30%;">    
                                     <h2>Unity3D Mobile Game</h2>
                                 </div>
                             </div>
 
                             <div class="col-md-4">
-                                <div class="projectBox">
+                                <div id="Box3" class="projectBox">
                                     <img src="Images/Image3.jpg" class="img-responsive" style="width: 100%; border-radius: 30%;">
                                     <h2>Raspberry Pi Coding Assistant</h2>
                                 </div>
@@ -171,21 +174,21 @@
 
                         <div class="row">
                             <div class="col-md-4">
-                                <div class="projectBox">
+                                <div id="Box4" class="projectBox">
                                     <img src="Images/Image4.png" class="img-responsive" style="width: 100%; border-radius: 30%;">
                                     <h2>8 Ball Pool</h2>
                                 </div>
                             </div>
         
                             <div class="col-md-4">
-                                <div class="projectBox">
+                                <div id="Box5" class="projectBox">
                                     <img src="Images/Image5.png" class="img-responsive" style="width: 100%; border-radius: 30%;">
                                     <h2>Graphing Application</h2>
                                 </div>
                             </div>
         
                             <div class="col-md-4">
-                                <div class="projectBox">
+                                <div id="Box6" class="projectBox">
                                     <img src="Images/Image6.jpg" class="img-responsive" style="width: 100%; border-radius: 30%;">
                                     <h2>Sign Language Recognition Project</h2>
                                 </div>
@@ -194,6 +197,135 @@
                     </div>
                 </div>
             </section>
+
+            <div id="Modal">
+                <div id="Modal-content1" class="modal-content">
+                    <span class="close">&times;</span>
+                    <h3>Embedded and Data Analysis Algorithms</h3>
+
+                    <div class="modal-textbox">
+                        <ul>
+                            <li>This project is cool This project is cool This project is cool This project is cool</li>
+                            <li>This project is cool This project is cool This project is cool This project is cool</li>
+                            <li>This project is cool This project is cool This project is cool This project is cool</li>
+                            <li>This project is cool This project is cool This project is cool This project is cool</li>
+                            <li>This project is cool This project is cool This project is cool This project is cool</li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <div id="Modal-content2" class="modal-content">
+                    <span class="close">&times;</span>
+                    <h3>Unity3D Game</h3>
+
+                    <div class="modal-textbox">
+                        <ul>
+                            <li>This project is cool This project is cool This project is cool This project is cool</li>
+                            <li>This project is cool This project is cool This project is cool This project is cool</li>
+                            <li>This project is cool This project is cool This project is cool This project is cool</li>
+                            <li>This project is cool This project is cool This project is cool This project is cool</li>
+                            <li>This project is cool This project is cool This project is cool This project is cool</li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <div id="Modal-content3" class="modal-content">
+                    <span class="close">&times;</span>
+                    <h3>Raspberry Pi Coding Assistant</h3>
+
+                    <div class="modal-textbox">
+                        <ul>
+                            <li>This project is cool This project is cool This project is cool This project is cool</li>
+                            <li>This project is cool This project is cool This project is cool This project is cool</li>
+                            <li>This project is cool This project is cool This project is cool This project is cool</li>
+                            <li>This project is cool This project is cool This project is cool This project is cool</li>
+                            <li>This project is cool This project is cool This project is cool This project is cool</li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <div id="Modal-content4" class="modal-content">
+                    <span class="close">&times;</span>
+                    <h3>8 Ball Pool</h3>
+
+                    <div class="modal-textbox">
+                        <ul>
+                            <li>This project is cool This project is cool This project is cool This project is cool</li>
+                            <li>This project is cool This project is cool This project is cool This project is cool</li>
+                            <li>This project is cool This project is cool This project is cool This project is cool</li>
+                            <li>This project is cool This project is cool This project is cool This project is cool</li>
+                            <li>This project is cool This project is cool This project is cool This project is cool</li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <div id="Modal-content5" class="modal-content">
+                    <span class="close">&times;</span>
+                    <h3>Graphing Application</h3>
+
+                    <div class="modal-textbox">
+                        <ul>
+                            <li>This project is cool This project is cool This project is cool This project is cool</li>
+                            <li>This project is cool This project is cool This project is cool This project is cool</li>
+                            <li>This project is cool This project is cool This project is cool This project is cool</li>
+                            <li>This project is cool This project is cool This project is cool This project is cool</li>
+                            <li>This project is cool This project is cool This project is cool This project is cool</li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <div id="Modal-content6" class="modal-content">
+                    <span class="close">&times;</span>
+                    <h3>Sign Language Recognition Project</h3>
+
+                    <div class="modal-textbox">
+                        <ul>
+                            <li>This project is cool This project is cool This project is cool This project is cool</li>
+                            <li>This project is cool This project is cool This project is cool This project is cool</li>
+                            <li>This project is cool This project is cool This project is cool This project is cool</li>
+                            <li>This project is cool This project is cool This project is cool This project is cool</li>
+                            <li>This project is cool This project is cool This project is cool This project is cool</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                $('#Box1').click(function(){
+                    $('#Modal').fadeIn(500);
+                    $('#Modal-content1').css('display', 'block');
+                });
+
+                $('#Box2').click(function(){
+                    $('#Modal').fadeIn(500);
+                    $('#Modal-content2').css('display', 'block');
+                });
+
+                $('#Box3').click(function(){
+                    $('#Modal').fadeIn(500);
+                    $('#Modal-content3').css('display', 'block');
+                });
+
+                $('#Box4').click(function(){
+                    $('#Modal').fadeIn(500);
+                    $('#Modal-content4').css('display', 'block');
+                });
+
+                $('#Box5').click(function(){
+                    $('#Modal').fadeIn(500);
+                    $('#Modal-content5').css('display', 'block');
+                });
+
+                $('#Box6').click(function(){
+                    $('#Modal').fadeIn(500);
+                    $('#Modal-content6').css('display', 'block');
+                });
+
+                $('.close').click(function() {
+                    $('#Modal').css('display', 'none');
+                    $('.modal-content').css('display', 'none');
+                });
+            </script>
 
         </div>
     </body>

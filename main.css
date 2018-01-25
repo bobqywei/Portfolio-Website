@@ -224,7 +224,7 @@ section{
 
 .modal-textbox{
     width: 100%;
-    text-align: justify;
+    text-align: left;
     color: rgb(7, 11, 30);
     margin-left: -16px;
     text-shadow: none;
@@ -245,6 +245,7 @@ section{
     width: 40px;
     height: 40px;
     margin: auto auto;
+    padding: 3px 0px 0px 0px;
 }
 
 .link:hover{

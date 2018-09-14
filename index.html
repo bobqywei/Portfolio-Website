@@ -150,24 +150,25 @@
                     <div class="container">
 
                         <div class="row">
+
                             <div class="col-md-4">
                                 <div id="Box1" class="projectBox">
+                                    <img src="Images/Image0.png" class="img-responsive" style="width: 100%; border-radius: 30%;">
+                                    <h2>Image Inpainting</h2>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div id="Box2" class="projectBox">
                                     <img src="Images/Image1.jpg" class="img-responsive" style="width: 100%; border-radius: 30%;">
                                     <h2>Embedded and Data Analysis Algorithms</h2>
                                 </div>
                             </div>
 
                             <div class="col-md-4">
-                                <div id="Box2" class="projectBox">
+                                <div id="Box3" class="projectBox">
                                     <img src="Images/Image2.png" class="img-responsive" style="width: 100%; border-radius: 30%;">    
                                     <h2>Unity3D Mobile Game</h2>
-                                </div>
-                            </div>
-
-                            <div class="col-md-4">
-                                <div id="Box3" class="projectBox">
-                                    <img src="Images/Image3.jpg" class="img-responsive" style="width: 100%; border-radius: 30%;">
-                                    <h2>Raspberry Pi Coding Assistant</h2>
                                 </div>
                             </div>
                         </div>
@@ -175,31 +176,32 @@
                         <div class="row">
                             <div class="col-md-4">
                                 <div id="Box4" class="projectBox">
+                                    <img src="Images/Image3.jpg" class="img-responsive" style="width: 100%; border-radius: 30%;">
+                                    <h2>Raspberry Pi Coding Assistant</h2>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div id="Box5" class="projectBox">
                                     <img src="Images/Image4.png" class="img-responsive" style="width: 100%; border-radius: 30%;">
                                     <h2>8 Ball Pool</h2>
                                 </div>
                             </div>
         
                             <div class="col-md-4">
-                                <div id="Box5" class="projectBox">
+                                <div id="Box6" class="projectBox">
                                     <img src="Images/Image5.png" class="img-responsive" style="width: 100%; border-radius: 30%;">
                                     <h2>Graphing Application</h2>
                                 </div>
                             </div>
         
-                            <div class="col-md-4">
-                                <div id="Box6" class="projectBox">
-                                    <img src="Images/Image6.jpg" class="img-responsive" style="width: 100%; border-radius: 30%;">
-                                    <h2>Sign Language Recognition Project</h2>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
             </section>
 
             <div id="Modal">
-                <div id="Modal-content1" class="modal-content">
+                <div id="Modal-content2" class="modal-content">
                     <span class="close">&times;</span>
                     <h3>Embedded and Data Analysis Algorithms</h3>
 
@@ -239,7 +241,7 @@
                     </div>
                 </div>
     
-                <div id="Modal-content2" class="modal-content">
+                <div id="Modal-content3" class="modal-content">
                     <span class="close">&times;</span>
                     <h3>Unity3D Game</h3>
 
@@ -272,7 +274,7 @@
                     </div>
                 </div>
     
-                <div id="Modal-content3" class="modal-content">
+                <div id="Modal-content4" class="modal-content">
                     <span class="close">&times;</span>
                     <h3>Raspberry Pi Coding Assistant</h3>
 
@@ -308,7 +310,7 @@
                     </div>
                 </div>
     
-                <div id="Modal-content4" class="modal-content">
+                <div id="Modal-content5" class="modal-content">
                     <span class="close">&times;</span>
                     <h3>8 Ball Pool</h3>
 
@@ -338,7 +340,7 @@
                     </div>
                 </div>
     
-                <div id="Modal-content5" class="modal-content">
+                <div id="Modal-content6" class="modal-content">
                     <span class="close">&times;</span>
                     <h3>Graphing Application</h3>
 
@@ -367,29 +369,32 @@
                     </div>
                 </div>
     
-                <div id="Modal-content6" class="modal-content">
+                <div id="Modal-content1" class="modal-content">
                     <span class="close">&times;</span>
-                    <h3>miniML</h3>
+                    <h3>Image Inpainting</h3>
+
+                    <iframe src="https://www.youtube.com/embed/Iaq6mqo0r-E" style="display: block; width: 90%; height: 250px; margin: 0 auto; padding: 10px 0px 30px 0px; border: 0;"></iframe>
 
                     <div class="modal-textbox">
                         <ul>
                             <li>
-                                A proof of concept for an American Sign Language software capable of running
-                                entirely on modern smartphone hardware. The project was developed in a team of
-                                four as an entry for Hack the North 2017.
+                                Developed and trained a model capable of filling in irregular holes in an image through a single forward pass. Irregularly shaped masks can be filled in within 3 seconds of single-threaded computation on a CPU.
                             </li>
                             <br/>
                             <li>
-                                The project was intended as a demonstration of the efficiency of the Darknet Neural Network
-                                framework and its YOLO (You Only Look Once) approach to object detection.
+                                Constructed PyTorch model based on U-Net encoder-decoder architecture and the partial convolutional layers detailed in Liu, G., Reda, F.A., Shih, K.J. (2018) “Image Inpainting for Irregular Holes Using Partial Convolutions”.
                             </li>
                             <br/>
                             <li>
-                                The entire of dataset was approximately two thousand images scraped from various open-source
-                                projects and research papers online. The image processing and training were done on AWS servers
-                                and the resulting weights were loaded onto a lightweight iOS application.
+                                Currently working on improvements such as compressing the weights for potential integration on mobile platforms and in-place batch-normalization for decreased GPU VRAM usage during training.
                             </li>
                         </ul>
+                    </div>
+
+                    <div class="link">
+                        <a href="https://github.com/bobqywei/inpainting-partial-conv" target="_blank">
+                            <img src="Images/GithubBtn.png" style="display: block; width: 100%; margin: auto auto;">
+                        </a>
                     </div>
                 </div>
             </div>

@@ -100,31 +100,31 @@ section{
     top: 8%;
 }
 
-#Description{
+#Resume{
     position: absolute;
-    width: 29%;
-    left: 7%;
-    top: 52%;
+    width: 10%;
+    left: 26%;
+    top: 64%;
 }
 
 #LinkedIn{
     position: absolute;
     width: 10%;
     left: 20%;
-    top: 25%;
+    top: 28%;
 }
 
-#Resume{
+#Scholar{
     position: absolute;
     width: 7%;
     left: 31%;
-    top: 4%;
+    top: 3%;
 }
 
 #GitHub{
     position: absolute;
     width: 10%;
-    left: 75%;
+    left: 74%;
     top: 64%;
 }
 
@@ -176,7 +176,7 @@ section{
     z-index: -1;
 }
 
-.projectBox{
+/* .projectBox{
     position: relative;
     margin: 40px auto;
 }
@@ -196,9 +196,9 @@ section{
     opacity: 0;
     color: #fff;
     transition: .8s;
-}
+} */
 
-.projectBox:hover h2{
+/* .projectBox:hover h2{
     opacity: 1.0;
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);    
 }
@@ -250,4 +250,4 @@ section{
 
 .link:hover{
     opacity: 0.5;
-}
+} */

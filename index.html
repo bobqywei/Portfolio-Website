@@ -18,10 +18,7 @@
 
             $(window).on("load", function() {
                 $('#Name').fadeIn(1000, function() {
-                    $('#Content2').fadeIn(1000, function() {
-                        $('#Arrow-div').fadeIn(1000);
-                        $('#Content1').fadeIn(1000);
-                    });
+                    $('#Content1').fadeIn(1000);
                 });
             });
         </script>
@@ -33,6 +30,12 @@
                     <img src="Images/Name.png" style="display: block; width: 80%; height: auto; margin: auto auto;">
                 </div>
 
+                <!-- <div id="Content1" style="display:none;">
+                    <div id="Description">
+                        <img src="Images/Text.png" style="display: block; width: 100%; height: auto; margin: auto auto;">
+                    </div>
+                </div> -->
+                
                 <div id="Content1" style="display:none;">
                     <div id="Photo">
                         <img src="Images/Photo.jpg" id="Photo-img" style="display: block; position: absolute; width: 95%; height: auto; z-index: 2; opacity: 0.9;">            
@@ -42,12 +45,16 @@
                         </div>
                     </div>
 
-                    <div id="Description">
-                        <img src="Images/Text.png" style="display: block; width: 100%; height: auto; margin: auto auto;">
+                    <div id="Resume">
+                        <a href="https://docs.google.com/viewerng/viewer?url=https://github.com/bobqywei/Resume/raw/master/latex_resume/resume.pdf" target="_blank">
+                            <img id="Resume-img" src="Images/Resume.png" style="display: block; position: absolute; width: 70%; height: auto; z-index: 2;">
+                        </a>
+
+                        <div class="box" style="margin-top: -15%; margin-left: -15%;">
+                            <div class="small-shadow" id="Resume-shadow"></div>
+                        </div>
                     </div>
-                </div>
-                
-                <div id="Content2" style="display:none;">
+
                     <div id="LinkedIn">
                         <a href="https://linkedin.com/in/bobqywei" target="_blank">
                             <img id="LinkedIn-img" src="Images/Linkedin.png" style="display: block; position: absolute; width: 70%; height: auto; z-index: 2;">
@@ -58,14 +65,14 @@
                         </div>
                     </div>
 
-                    <div id="Resume">
-                        <a href="https://docs.google.com/viewerng/viewer?url=https://github.com/bobqywei/Resume/raw/master/latex_resume/resume.pdf" target="_blank">
-                            <img id="Resume-img" src="Images/Resume.png" style="display: block; position: absolute; width: 80%; height: auto; z-index: 2;">
+                    <div id="Scholar">
+                        <a href="https://scholar.google.com/citations?user=rudZX5gAAAAJ" target="_blank">
+                            <img id="Scholar-img" src="Images/Scholar.png" style="display: block; position: absolute; width: 85%; height: auto; z-index: 2;">
                         </a>
 
                         <div class="box" style="margin-top: -7%; margin-left: -7%;">
-                            <div class="xsmall-shadow" id="Resume-shadow"></div>
-                        </div>
+                            <div class="xsmall-shadow" id="Scholar-shadow"></div>
+                        </div>               
                     </div>
 
                     <div id="GitHub">
@@ -80,6 +87,13 @@
                 </div>
 
                 <script>
+                    $('#Scholar').hover(function(){
+                        $('#Scholar-shadow').animate({opacity: '0.0'}, 500);
+                        $('#Scholar-img').animate({opacity: '0.6'}, 200);
+                    }, function(){
+                        $('#Scholar-shadow').animate({opacity: '1.0'}, 300);
+                        $('#Scholar-img').animate({opacity: '1.0'}, 100);
+                    });
                     $('#LinkedIn').hover(function(){
                         $('#LinkedIn-shadow').animate({opacity: '0.0'}, 500);
                         $('#LinkedIn-img').animate({opacity: '0.6'}, 200);
@@ -108,16 +122,14 @@
                         $('#Photo-shadow').animate({opacity: '1.0'}, 300);
                         $('#Photo-img').animate({opacity: '0.9'}, 100);
                     });
-                    $('#Description').hover(function(){
-                        $('#Description').animate({opacity: '0.6'}, 200);
-                    }, function(){
-                        $('#Description').animate({opacity: '1.0'}, 200);
-                    });
                 </script>
             </div>
         </div>
+    </body>
 
-        <div id="Project-page">
+</html>
+
+        <!-- <div id="Project-page">
 
             <div id="Arrow-div" style="position: absolute; top: -18vh; width: 100%; display: none;">
                 <img src="Images/Arrow.png" id="Arrow-img" style="display: block; margin: auto auto; width: 12vh; opacity: 0.8;">
@@ -443,7 +455,4 @@
                 }
             </script>
 
-        </div>
-    </body>
-
-</html>
+        </div> -->
